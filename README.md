@@ -1,1 +1,1 @@
-# growi5-image
+# GROWI Docker Image
