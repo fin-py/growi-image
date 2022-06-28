@@ -8,15 +8,15 @@ env:
   IMAGE_NAME: ${{ github.repository }}
 
 jobs:
-  # update-dockerfile:
-  #   runs-on: ubuntu-latest
-  #   steps:
-  #     - uses: actions/checkout@v3
-  #     - run: |
-  #         wget -N "https://raw.githubusercontent.com/weseek/growi-docker-compose/master/Dockerfile"
-  #     - uses: EndBug/add-and-commit@v9
-  #       with:
-  #         default_author: github_actions
+  update-dockerfile:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - run: |
+          wget -N "https://raw.githubusercontent.com/weseek/growi-docker-compose/master/Dockerfile"
+      - uses: EndBug/add-and-commit@v9
+        with:
+          default_author: github_actions
 
   build-and-push-image:
     runs-on: ubuntu-latest
